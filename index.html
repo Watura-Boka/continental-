@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Continental College Wattala — Cambridge &amp; Edexcel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,450;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F8FAFD;--deep:#EAF0F8;--ink:#0E1B33;--soft:#5B6780;--navy:#0A1B3F;--navy2:#13264F;--blue:#1D4ED8;--gold:#B8913A;--gold2:#D4AC52;--line:rgba(14,27,51,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.6 Inter,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+.serif,h1,h2,h3{font-family:Fraunces,serif;font-weight:450}
+.eyebrow{font:400 .72rem 'Space Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+@media(max-width:640px){.wrap{padding:0 20px}}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;font:500 .84rem Inter;letter-spacing:.03em;border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer;transition:.25s}
+.btn:hover{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.btn.ghost{background:transparent;color:var(--ink)}.btn.ghost:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.hero .btn{background:var(--gold2);border-color:var(--gold2);color:var(--navy)}.hero .btn:hover{background:#fff;border-color:#fff}
+.hero .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}.hero .btn.ghost:hover{background:#fff;color:var(--navy)}
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:.35s;border-bottom:1px solid transparent}
+header.solid{background:rgba(248,250,253,.93);backdrop-filter:blur(10px);border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:1180px;margin:0 auto;padding:0 28px}
+.logo{font:600 1.3rem Fraunces,serif;color:#fff;transition:.3s}.logo em{color:var(--gold2)}.logo small{display:block;font:400 .56rem 'Space Mono',monospace;letter-spacing:.3em;margin-top:2px;opacity:.8}
+header.solid .logo{color:var(--ink)}
+nav.links{display:flex;gap:26px;align-items:center}
+nav.links a{font-size:.84rem;color:rgba(255,255,255,.85);transition:.2s}nav.links a:hover{color:#fff}
+header.solid nav.links a{color:var(--soft)}header.solid nav.links a:hover{color:var(--ink)}
+header.solid nav.links .btn{color:#fff}
+nav.links .btn{padding:10px 20px;background:var(--gold2);border-color:var(--gold2);color:var(--navy)}
+header.solid nav.links .btn{background:var(--ink);border-color:var(--ink)}
+.mt{display:none;background:none;border:0;padding:8px;cursor:pointer}.mt span{display:block;width:24px;height:1.5px;background:#fff;margin:5px 0;transition:.3s}
+header.solid .mt span{background:var(--ink)}
+.mp{display:none;flex-direction:column;background:var(--paper);border-top:1px solid var(--line)}.mp.open{display:flex}
+.mp a{padding:16px 20px;border-bottom:1px solid var(--line);font-size:.95rem}
+@media(max-width:960px){nav.links{display:none}.mt{display:block}.nav{padding:0 12px 0 20px}header.open{background:var(--paper)}header.open .logo{color:var(--ink)}header.open .mt span{background:var(--ink)}}
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;background:linear-gradient(160deg,var(--navy),#1b3a82);overflow:hidden;color:#F2F5FB}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;animation:drift 28s ease-in-out infinite alternate}
+@keyframes drift{to{transform:scale(1.07)}}
+.hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,27,63,.5),rgba(10,27,63,.65) 55%,rgba(10,27,63,.96)),linear-gradient(90deg,rgba(10,27,63,.8),rgba(10,27,63,.1) 60%)}
+.hi{position:relative;z-index:2;max-width:1180px;margin:0 auto;width:100%;padding:130px 28px 120px}
+.hero .eyebrow{color:var(--gold2)}
+.hero h1{font-size:clamp(2.7rem,6.4vw,5.3rem);line-height:1.03;letter-spacing:-.01em;max-width:840px;margin:0 0 22px}
+.hero h1 em{color:var(--gold2);font-weight:400}
+.hero p{max-width:500px;font-size:1.08rem;color:#CBD6EA;margin:0 0 32px}
+.ctas{display:flex;gap:14px;flex-wrap:wrap}
+.tick{position:absolute;z-index:3;left:0;right:0;bottom:0;background:var(--gold);overflow:hidden}
+.tt{display:flex;white-space:nowrap;width:max-content;animation:sc 40s linear infinite;padding:13px 0}
+.tt span{font:400 .74rem 'Space Mono',monospace;letter-spacing:.09em;text-transform:uppercase;color:var(--navy);margin-right:44px}
+@keyframes sc{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.tt,.hero>img{animation:none}.rv{opacity:1!important;transform:none!important}}
+/* sections */
+section{padding:120px 0}@media(max-width:640px){section{padding:76px 0}}
+.sh{max-width:640px;margin-bottom:56px}.sh h2{font-size:clamp(2rem,4vw,2.9rem);line-height:1.1;margin:0 0 16px}.sh h2 em,.cp h2 em{color:var(--gold);font-weight:400}.sh p{color:var(--soft);margin:0}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}.rv.in{opacity:1;transform:none}
+/* photo slots */
+.ph{position:relative;background:linear-gradient(150deg,var(--navy2),#2a4a9a);overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.ph:hover img{transform:scale(1.04)}
+/* about */
+.about{background:var(--deep)}
+.g2{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:center}
+@media(max-width:860px){.g2{grid-template-columns:1fr;gap:44px}}
+.about .ph{aspect-ratio:4/5}.about .ph:after{content:"";position:absolute;inset:18px;border:1px solid rgba(255,255,255,.55);pointer-events:none}
+.about h2{font-size:clamp(1.9rem,3.4vw,2.6rem);line-height:1.12;margin:0 0 20px}.about h2 em{color:var(--gold);font-weight:400}
+.about p{color:var(--soft);margin:0 0 16px}
+.facts{margin-top:28px;border-top:1px solid var(--line)}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.facts b{font:400 .7rem 'Space Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:var(--soft)}
+/* courses */
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.chip{font:400 .72rem 'Space Mono',monospace;letter-spacing:.06em;text-transform:uppercase;padding:9px 16px;border:1px solid var(--line);background:transparent;color:var(--soft);cursor:pointer;transition:.2s}
+.chip:hover{border-color:var(--ink);color:var(--ink)}.chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.cg{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+@media(max-width:1000px){.cg{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.cg{grid-template-columns:1fr}}
+.cc[hidden]{display:none}
+.cc .ph{aspect-ratio:4/3}
+.cc .pl{border:1px solid var(--line);border-top:0;padding:20px;background:#fff}
+.cc .pl .m{font:400 .68rem 'Space Mono',monospace;color:var(--gold);letter-spacing:.06em;text-transform:uppercase}
+.cc h3{font-size:1.2rem;line-height:1.25;margin:8px 0 8px}.cc p{font-size:.86rem;color:var(--soft);margin:0 0 14px}
+.cc a{font:400 .7rem 'Space Mono',monospace;letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px}.cc a:hover{color:var(--gold);border-color:var(--gold)}
+.note{margin-top:28px;color:var(--soft);font-size:.9rem}
+/* teachers */
+.teachers{background:var(--navy);color:#EAF0FA}
+.teachers .sh p{color:#9FB0CF}.teachers .eyebrow{color:var(--gold2)}
+.tc{display:grid;grid-template-columns:340px 1fr;gap:56px;align-items:center}
+@media(max-width:860px){.tc{grid-template-columns:1fr;gap:34px}.tc .ph{max-width:320px}}
+.tc .ph{aspect-ratio:4/5;display:grid;place-items:center;text-align:center;padding:24px;font:400 .72rem 'Space Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#9FB0CF;border:1px solid rgba(255,255,255,.14);background:var(--navy2)}
+.tc h3{font-size:2.3rem;margin:0 0 4px}.tc .role{color:var(--gold2);font:400 .76rem 'Space Mono',monospace;letter-spacing:.07em;text-transform:uppercase;margin-bottom:22px}
+.tc ul{list-style:none;padding:0;margin:0 0 28px;border-top:1px solid rgba(255,255,255,.14)}
+.tc li{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.14);color:#C3CFE6;font-size:.95rem}
+.teachers .btn{background:var(--gold2);border-color:var(--gold2);color:var(--navy)}.teachers .btn:hover{background:#fff;border-color:#fff}
+/* success */
+.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+@media(max-width:860px){.sg{grid-template-columns:repeat(2,1fr)}}
+.sg div{background:var(--paper);padding:36px 28px}
+.sg b{display:block;font:450 2.6rem Fraunces,serif;color:var(--line);line-height:1;margin-bottom:12px}
+.sg span{font:400 .7rem 'Space Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:var(--soft)}
+.sg small{display:block;margin-top:6px;color:var(--soft);font-size:.8rem}
+.q{margin-top:32px;border:1px dashed var(--line);padding:30px;color:var(--soft)}
+/* campus */
+.campus{background:var(--deep)}
+.gl{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:16px}
+.gl .ph:first-child{grid-column:span 2;grid-row:span 2}
+@media(max-width:760px){.gl{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}}
+.gl .ph{cursor:zoom-in}.gl .cap{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;background:linear-gradient(0deg,rgba(10,27,63,.9),transparent);color:#fff;font:400 .7rem 'Space Mono',monospace;letter-spacing:.07em;text-transform:uppercase}
+.lb{position:fixed;inset:0;z-index:300;background:rgba(6,14,32,.92);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+.lb.on{display:flex;animation:f .3s}.lb img{max-height:86vh;max-width:100%;object-fit:contain}@keyframes f{from{opacity:0}}
+/* news */
+.ng{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}@media(max-width:860px){.ng{grid-template-columns:1fr}}
+.nc .ph{aspect-ratio:3/2}.nc .pl{padding:20px 0}.nc time{font:400 .68rem 'Space Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:var(--gold)}
+.nc h3{font-size:1.25rem;margin:8px 0}.nc p{color:var(--soft);font-size:.9rem;margin:0}
+/* contact */
+.contact{background:var(--deep)}
+.ch{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border:1px solid var(--line);background:var(--paper);margin-bottom:14px;transition:.2s}
+.ch:hover{border-color:var(--gold)}.ch b{display:block;font:450 1.05rem Fraunces,serif}.ch small{font:400 .68rem 'Space Mono',monospace;color:var(--soft);letter-spacing:.04em}.ch i{color:var(--gold);font-style:normal;font-size:1.2rem}
+.hrs{margin-top:26px;border-top:1px solid var(--line)}.hrs div{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);font-size:.9rem}
+form{display:flex;flex-direction:column;gap:16px}
+label{font:400 .7rem 'Space Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:var(--soft);display:block;margin-bottom:6px}
+input,select,textarea{width:100%;padding:13px 14px;border:1px solid var(--line);background:var(--paper);font:400 .94rem Inter;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold)}
+/* cta + footer */
+.cp{background:var(--navy);color:#fff;text-align:center;padding:100px 0}.cp h2{font-size:clamp(2rem,4.4vw,3.2rem);margin:0 0 18px}.cp p{color:#9FB0CF;margin:0 0 30px}
+.cp .btn{background:var(--gold2);border-color:var(--gold2);color:var(--navy)}.cp .btn:hover{background:#fff;border-color:#fff}
+footer{background:#07122B;color:#C3CFE6;padding:70px 0 28px}
+.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:44px;margin-bottom:50px}@media(max-width:800px){.fg{grid-template-columns:1fr 1fr}}@media(max-width:520px){.fg{grid-template-columns:1fr}}
+footer .logo{color:#fff}footer p{color:#7F90B3;font-size:.9rem;max-width:290px;margin-top:14px}
+footer h4{font:400 .7rem 'Space Mono',monospace;letter-spacing:.09em;text-transform:uppercase;color:var(--gold2);margin:0 0 16px}
+footer li{list-style:none;margin-bottom:11px;font-size:.9rem}footer ul{padding:0;margin:0}footer a:hover{color:var(--gold2)}
+.fb{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.78rem;color:#7F90B3}
+/* mobile dock */
+.dock{display:none}
+@media(max-width:640px){body{padding-bottom:62px}.dock{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--navy);padding-bottom:env(safe-area-inset-bottom,0)}.dock a{color:#fff;text-align:center;padding:13px 0;font:400 .66rem 'Space Mono',monospace;letter-spacing:.08em;text-transform:uppercase;border-right:1px solid rgba(255,255,255,.1)}.hi{padding-top:110px}.btn{width:100%;justify-content:center}}
+</style>
+</head>
+<body>
+<header id="hd">
+<div class="nav"><a href="#home" class="logo">Continental College<em>.</em><small>WATTALA</small></a>
+<nav class="links"><a href="#about">About</a><a href="#academics">Academics</a><a href="#teachers">Teachers</a><a href="#success">Student Success</a><a href="#campus">Campus</a><a href="#news">News &amp; Events</a><a href="#contact">Contact</a><a href="#contact" class="btn">Enquire Now</a></nav>
+<button class="mt" id="mt" aria-label="Menu"><span></span><span></span><span></span></button></div>
+<div class="mp" id="mp"><a href="#about">About</a><a href="#academics">Academics</a><a href="#teachers">Teachers</a><a href="#success">Student Success</a><a href="#campus">Campus</a><a href="#news">News &amp; Events</a><a href="#contact">Contact</a></div>
+</header>
+
+<section class="hero" id="home" style="padding:0">
+<img data-img="hero" alt="Students in a classroom" onerror="this.remove()">
+<div class="hi">
+<span class="eyebrow">Cambridge &amp; Edexcel · Wattala, Sri Lanka</span>
+<h1>Empowering Students. <em>Building Futures.</em></h1>
+<p>Specialist-led Cambridge and Edexcel classes in a secure, well-equipped setting, helping students reach their O/L and A/L potential.</p>
+<div class="ctas"><a href="#academics" class="btn">Explore Our Courses</a><a href="#teachers" class="btn ghost">Meet Our Teachers</a><a href="#contact" class="btn ghost">Contact Us</a></div>
+</div>
+<div class="tick"><div class="tt">
+<span>✦ Cambridge O/L &amp; A/L</span><span>✦ Edexcel IGCSE &amp; International A Level</span><span>✦ Equipped Laboratories</span><span>✦ Secure Environment</span><span>✦ Wattala, Sri Lanka</span>
+<span>✦ Cambridge O/L &amp; A/L</span><span>✦ Edexcel IGCSE &amp; International A Level</span><span>✦ Equipped Laboratories</span><span>✦ Secure Environment</span><span>✦ Wattala, Sri Lanka</span>
+</div></div>
+</section>
+
+<section class="about" id="about"><div class="wrap g2">
+<div class="ph rv"><img data-img="about" alt="Continental College" onerror="this.remove()"></div>
+<div class="rv"><span class="eyebrow">About the College</span>
+<h2>A serious place to learn, <em>close to home.</em></h2>
+<p>Continental College is an education centre on Vincent Joseph Mawatha, Wattala, teaching Cambridge and Edexcel programmes with a focus on understanding, exam technique and steady progress.</p>
+<p>Our history, leadership, vision and mission will be published here once confirmed by the college.</p>
+<div class="facts"><div><b>Location</b><span>Wattala, Sri Lanka</span></div><div><b>Syllabi</b><span>Cambridge · Edexcel</span></div><div><b>Levels</b><span>O/L · A/L</span></div><div><b>Facilities</b><span>Laboratories · Secure campus</span></div></div>
+</div></div></section>
+
+<section id="academics"><div class="wrap">
+<div class="sh rv"><span class="eyebrow">Academics</span><h2>Find your <em>class.</em></h2><p>Filter by syllabus or level. More subjects will appear as the college confirms its full programme.</p></div>
+<div class="chips" id="chips"><button class="chip on" data-f="all">All</button><button class="chip" data-f="Cambridge">Cambridge</button><button class="chip" data-f="Edexcel">Edexcel</button><button class="chip" data-f="O/L">O/L</button><button class="chip" data-f="A/L">A/L</button></div>
+<div class="cg" id="cg"></div>
+<p class="note">Timetables and fees are available on request — <a href="#contact" style="border-bottom:1px solid var(--ink)">ask us</a>.</p>
+</div></section>
+
+<section class="teachers" id="teachers"><div class="wrap">
+<div class="sh rv"><span class="eyebrow">Our Teachers</span><h2>Taught by <em style="color:var(--gold2)">specialists.</em></h2><p>Profiles are published only after the teacher and college confirm every detail.</p></div>
+<div class="tc rv">
+<div class="ph">Approved photograph<br>to be added</div>
+<div><h3>Chathura Fernando</h3><div class="role">Biology Teacher</div>
+<ul><li>Cambridge and Edexcel Biology, O/L and A/L</li><li>Teaching at Continental College since January 2024</li><li>Qualifications, experience and achievements to follow after confirmation</li></ul>
+<a href="#contact" class="btn">Enquire About Biology</a></div></div>
+</div></section>
+
+<section id="success"><div class="wrap">
+<div class="sh rv"><span class="eyebrow">Student Success</span><h2>Results, <em>verified.</em></h2><p>We publish examination results and testimonials only when officially confirmed and with permission.</p></div>
+<div class="sg rv"><div><b>—</b><span>Examination results</span><small>Awaiting verification</small></div><div><b>—</b><span>Students taught</span><small>Awaiting verification</small></div><div><b>—</b><span>University placements</span><small>Awaiting verification</small></div><div><b>—</b><span>Years of teaching</span><small>Awaiting verification</small></div></div>
+<div class="q rv">Student and parent testimonials will appear here once permission has been received.</div>
+</div></section>
+
+<section class="campus" id="campus"><div class="wrap">
+<div class="sh rv"><span class="eyebrow">Campus &amp; Facilities</span><h2>A secure, <em>equipped</em> environment.</h2><p>Highly equipped laboratories and a safe setting for focused study. Official photographs will replace the images shown.</p></div>
+<div class="gl rv" id="gl"></div>
+</div></section>
+
+<section id="news"><div class="wrap">
+<div class="sh rv"><span class="eyebrow">News &amp; Events</span><h2>What's <em>happening.</em></h2></div>
+<div class="ng" id="ng"></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap g2" style="align-items:start">
+<div class="rv"><span class="eyebrow">Contact &amp; Admissions</span>
+<h2 class="serif" style="font-size:clamp(1.9rem,3.4vw,2.6rem);line-height:1.12;margin:0 0 18px">Ask about a class, or <em style="color:var(--gold);font-weight:400">say hello.</em></h2>
+<p style="color:var(--soft);margin:0 0 28px">10 Vincent Joseph Mawatha, Wattala 11300, Sri Lanka</p>
+<a class="ch" href="tel:+94711233233"><span><b>Call</b><small>+94 71 123 3233</small></span><i>→</i></a>
+<a class="ch" href="https://wa.me/94711233233" target="_blank" rel="noopener"><span><b>WhatsApp</b><small>Message us directly</small></span><i>→</i></a>
+<a class="ch" href="https://www.google.com/maps/search/?api=1&query=Continental+College+10+Vincent+Joseph+Mawatha+Wattala" target="_blank" rel="noopener"><span><b>Directions</b><small>Open in Google Maps</small></span><i>→</i></a>
+<div class="hrs"><div><span>Monday – Friday</span><span>7:00 am – 8:00 pm</span></div><div><span>Saturday</span><span>7:00 am – 10:30 pm</span></div><div><span>Sunday</span><span>7:00 am – 8:30 pm</span></div></div>
+</div>
+<form class="rv" id="f">
+<div><label>Name</label><input name="n" required placeholder="Your full name"></div>
+<div><label>Phone</label><input name="p" type="tel" required placeholder="+94 7X XXX XXXX"></div>
+<div><label>Class of interest</label><select name="c"><option>Cambridge O/L Biology</option><option>Cambridge A/L Biology</option><option>Edexcel O/L Biology</option><option>Edexcel A/L Biology</option><option>Other / not sure</option></select></div>
+<div><label>Message</label><textarea name="m" rows="4" placeholder="Tell us what you're looking for"></textarea></div>
+<button class="btn" type="submit" style="justify-content:center">Send via WhatsApp</button>
+</form></div></section>
+
+<div class="cp"><div class="wrap rv"><span class="eyebrow">Admissions</span><h2>Start your journey with <em style="color:var(--gold2);font-weight:400">Continental College.</em></h2><p>Speak to us about classes, schedules and registration.</p><a href="#contact" class="btn">Enquire Now</a></div></div>
+
+<footer><div class="wrap"><div class="fg">
+<div><a href="#home" class="logo">Continental College<em>.</em></a><p>Cambridge and Edexcel education in Wattala, Sri Lanka.</p></div>
+<div><h4>Explore</h4><ul><li><a href="#about">About</a></li><li><a href="#teachers">Teachers</a></li><li><a href="#success">Student Success</a></li><li><a href="#campus">Campus</a></li></ul></div>
+<div><h4>Academics</h4><ul><li><a href="#academics">Cambridge</a></li><li><a href="#academics">Edexcel</a></li><li><a href="#news">News &amp; Events</a></li></ul></div>
+<div><h4>Contact</h4><ul><li>10 Vincent Joseph Mawatha, Wattala</li><li><a href="tel:+94711233233">+94 71 123 3233</a></li><li>Social links coming soon</li></ul></div>
+</div><div class="fb"><span>© 2026 Continental College Wattala</span><span>Privacy · Terms</span></div></div></footer>
+
+<div class="dock"><a href="tel:+94711233233">Call</a><a href="https://wa.me/94711233233" target="_blank" rel="noopener">WhatsApp</a><a href="#contact">Enquire</a><a href="https://www.google.com/maps/search/?api=1&query=Continental+College+10+Vincent+Joseph+Mawatha+Wattala" target="_blank" rel="noopener">Directions</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+/* ===== EDIT HERE: swap these stock placeholders for the college's own photos ===== */
+var U="https://images.unsplash.com/photo-";
+var Q="?auto=format&fit=crop&w=1400&q=75";
+var IMG={
+ hero:U+"1523050854058-8df90110c9f1"+Q,
+ about:U+"1580582932707-520aed937b7b"+Q,
+ c1:U+"1532094349884-543bc11b234d"+Q, c2:U+"1509062522246-3755977927d7"+Q,
+ c3:U+"1524178232363-1fb2b075b655"+Q, c4:U+"1562774053-701939374585"+Q
+};
+var COURSES=[
+ {s:"Cambridge",l:"O/L",t:"Cambridge O/L Biology",d:"Core biology foundations with exam-focused practice.",i:"c1"},
+ {s:"Cambridge",l:"A/L",t:"Cambridge A/L Biology",d:"In-depth A Level biology with structured revision.",i:"c2"},
+ {s:"Edexcel",l:"O/L",t:"Edexcel International GCSE Biology",d:"Full syllabus coverage and past-paper training.",i:"c3"},
+ {s:"Edexcel",l:"A/L",t:"Edexcel International A Level Biology",d:"Advanced concepts, practicals and exam technique.",i:"c4"}];
+var NEWS=[
+ {d:"Coming soon",t:"New Biology batches",x:"Upcoming Cambridge and Edexcel batches will be announced here.",i:"c2"},
+ {d:"Coming soon",t:"Seminars & workshops",x:"Announcements will be posted by the college.",i:"c3"},
+ {d:"Coming soon",t:"Examination information",x:"Key dates and notices for students and parents.",i:"c4"}];
+var GAL=[["Main Entrance","hero"],["Laboratory","c1"],["Classrooms","c2"],["Study Areas","c3"],["Campus","c4"]];
+function im(k,a){return '<img src="'+IMG[k]+'" alt="'+(a||'')+'" loading="lazy" onerror="this.remove()">'}
+document.querySelectorAll("[data-img]").forEach(function(e){e.src=IMG[e.dataset.img]});
+document.getElementById("cg").innerHTML=COURSES.map(function(c){return '<div class="cc rv" data-k="'+c.s+' '+c.l+'"><div class="ph" style="aspect-ratio:4/3">'+im(c.i,c.t)+'</div><div class="pl"><div class="m">'+c.s+' · '+c.l+'</div><h3>'+c.t+'</h3><p>'+c.d+'</p><a href="#contact">View details →</a></div></div>'}).join("");
+document.getElementById("ng").innerHTML=NEWS.map(function(n){return '<div class="nc rv"><div class="ph">'+im(n.i,n.t)+'</div><div class="pl"><time>'+n.d+'</time><h3>'+n.t+'</h3><p>'+n.x+'</p></div></div>'}).join("");
+document.getElementById("gl").innerHTML=GAL.map(function(g){return '<div class="ph" data-k="'+g[1]+'">'+im(g[1],g[0])+'<div class="cap">'+g[0]+'</div></div>'}).join("");
+document.getElementById("chips").onclick=function(e){var b=e.target.closest(".chip");if(!b)return;
+ document.querySelectorAll(".chip").forEach(function(c){c.classList.toggle("on",c===b)});
+ document.querySelectorAll(".cc").forEach(function(c){c.hidden=b.dataset.f!=="all"&&c.dataset.k.indexOf(b.dataset.f)<0})};
+var lb=document.getElementById("lb");
+document.getElementById("gl").onclick=function(e){var p=e.target.closest(".ph");if(!p||!p.querySelector("img"))return;lb.querySelector("img").src=p.querySelector("img").src;lb.classList.add("on")};
+lb.onclick=function(){lb.classList.remove("on")};
+var hd=document.getElementById("hd"),mp=document.getElementById("mp");
+function sc(){hd.classList.toggle("solid",scrollY>40)}sc();addEventListener("scroll",sc,{passive:true});
+document.getElementById("mt").onclick=function(){mp.classList.toggle("open");hd.classList.toggle("open")};
+mp.onclick=function(e){if(e.target.tagName==="A"){mp.classList.remove("open");hd.classList.remove("open")}};
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+document.getElementById("f").onsubmit=function(e){e.preventDefault();var f=e.target;
+ var m="Hello Continental College, I'm "+f.n.value+" ("+f.p.value+"). Interested in: "+f.c.value+"."+(f.m.value?" "+f.m.value:"");
+ window.open("https://wa.me/94711233233?text="+encodeURIComponent(m),"_blank")};
+</script>
+</body>
+</html>
